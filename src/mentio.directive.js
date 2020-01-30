@@ -47,7 +47,7 @@ angular.module('mentio', [])
                 };
 
                 $scope.bridgeSearch = function(termString) {
-                    var searchFn = $attrs.mentioSearch ? $scope.search : $scope.defaultSearch;
+                    var searchFn = $attrs.mentioSearch ? $scope.search() : $scope.defaultSearch;
                     searchFn({
                         term: termString
                     });
